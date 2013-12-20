@@ -10,14 +10,14 @@ const (
 )
 
 type Trello struct {
-	key   string
-	token string
+	Key   string
+	Token string
 }
 
 func NewTrello(key, token string) (t *Trello) {
 	t = new(Trello)
-	t.key = key
-	t.token = token
+	t.Key = key
+	t.Token = token
 	return t
 }
 

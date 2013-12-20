@@ -11,4 +11,7 @@ func main() {
 
 	t := trello.NewTrello("222", "sss")
 	fmt.Println(t)
+	for {
+		fmt.Println(t.Key)
+	}
 }
