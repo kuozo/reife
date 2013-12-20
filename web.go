@@ -13,7 +13,7 @@ func HomeHandler(w http.ResponseWriter, req *http.Request) {
 func main() {
 	http.HandleFunc("/", HomeHandler)
 	fmt.Println("Listening.........")
-	err := http.ListenAndServe(":"+os.Getenv("Port"), nil)
+	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 	if err != nil {
 		panic(err)
 	}
