@@ -7,7 +7,7 @@ import (
 )
 
 func HomeHandler(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintln("Hi, The App comming soon")
+	fmt.Fprintln(w, "Hi, The App comming soon")
 }
 
 func main() {
