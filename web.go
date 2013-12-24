@@ -2,12 +2,17 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"net/http"
 	"os"
 )
 
 func HomeHandler(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintln(w, "Hi, The App comming soon")
+	t, err := template.ParseFiles("templates/home.html")
+	if err != nil {
+		fmt.Println(err)
+	}
+	t.Execute(w, nil)
 }
 
 func main() {
