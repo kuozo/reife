@@ -8,6 +8,7 @@ import (
 )
 
 func HomeHandler(w http.ResponseWriter, req *http.Request) {
+	fmt.Println("Request from HomeHandler")
 	t, err := template.ParseFiles("templates/home.html")
 	if err != nil {
 		fmt.Println(err)
